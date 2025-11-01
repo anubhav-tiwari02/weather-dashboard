@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Weather Dashboard</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
+
+  </head>
+  <body>
+    <header>
+      <h1 class="app-title">Live Weather Dashboard 🌤️</h1>
+    </header>
+
+    <main>
+      <div class="main-layout">
+        <aside class="sidebar">
+          <section id="search-section">
+            <h2>🔎 Search for a Place:</h2>
+            <form id="search-form">
+              <input type="text" id="search-input" placeholder="e.g., New York" />
+              <button type="submit">Search</button>
+            </form>
+          </section>
+
+          <section id="history-section">
+            <h2>🕓 Search History</h2>
+            <div id="history-container"></div>
+          </section>
+        </aside>
+
+        <div class="weather-display">
+          <div id="loader" class="loader hidden">⏳ Loading...</div>
+          <div id="error-container" class="error-message hidden" aria-live="polite"></div>
+
+          <section id="current-weather-section" class="current-weather-section">
+            <h2 id="city-name-date">🌍 City Name (Date)</h2>
+            <div class="weather-data">
+              <p id="temperature">🌡️ Temperature: -- °C</p>
+              <p id="humidity">💧 Humidity: -- %</p>
+              <p id="wind-speed">🌬️ Wind Speed: -- m/s</p>
+            </div>
+          </section>
+
+          <section id="forecast-section" class="forecast-section">
+            <h2>📅 5 Day Forecast</h2>
+            <div id="forecast-container" class="forecast-card-container"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
