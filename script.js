@@ -9,7 +9,7 @@ const windSpeedEl = document.querySelector('#wind-speed');
 const forecastContainerEl = document.querySelector('#forecast-container');
 const historyContainerEl = document.querySelector('#history-container');
 
-const API_KEY = '5616574344c7e184a2d3bf0eb947a973';
+
 
 // 🌤️ Display current weather
 function displayCurrentWeather(data) {
@@ -256,3 +256,4 @@ themeToggle.addEventListener('click', () => {
   themeToggle.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 });
+
